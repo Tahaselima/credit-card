@@ -117,7 +117,7 @@ function App() {
         </form>
         <div className="form-action">
           <button 
-            disabled={!form.visibleNumber && !form.cvc && !form.expiry} 
+            disabled={!form.visibleNumber || !form.cvc || !form.expiry} 
             onClick={() => handleValidate()}
           >
             Payment
