@@ -116,7 +116,12 @@ function App() {
           </div>
         </form>
         <div className="form-action">
-          <button onClick={() => handleValidate()}>PAyment</button>
+          <button 
+            disabled={!form.visibleNumber && !form.cvc && !form.expiry} 
+            onClick={() => handleValidate()}
+          >
+            Payment
+          </button>
         </div>
         <div className={`validate validate-${isValid}`}>
           {isValid ? "Payment is success" : isValid !== null && "CreditCard not valid"} 
