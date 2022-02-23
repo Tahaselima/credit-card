@@ -116,10 +116,10 @@ function App() {
           </div>
         </form>
         <div className="form-action">
-          <button onClick={() => handleValidate()}>Validate</button>
+          <button onClick={() => handleValidate()}>PAyment</button>
         </div>
         <div className={`validate validate-${isValid}`}>
-          {isValid ? "It's valid" : isValid !== null && "Not valid"} 
+          {isValid ? "Payment is success" : isValid !== null && "CreditCard not valid"} 
         </div>
       </header>
     </div>
